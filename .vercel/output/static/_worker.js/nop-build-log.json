@@ -1,5 +1,5 @@
 {
-  "timestamp": 1730578806005,
+  "timestamp": 1731003348998,
   "outputDir": ".vercel/output/static/_worker.js",
   "versions": {
     "@cloudflare/next-on-pages": "1.13.5"
@@ -16,14 +16,16 @@
       "/404.html",
       "/_next/static/chunks/framework-516982be4eea35ea.js",
       "/_next/static/chunks/main-6292f927cd63e2cb.js",
-      "/_next/static/chunks/pages/_app-0d507208cd05a6f9.js",
+      "/_next/static/chunks/pages/_app-a5d91e87e536028e.js",
       "/_next/static/chunks/pages/_error-8c2b6ff87cd513a2.js",
-      "/_next/static/chunks/pages/index-c99684afdd0ba5e0.js",
+      "/_next/static/chunks/pages/about-814c530993cf67d1.js",
+      "/_next/static/chunks/pages/index-b3f4200dcfbf4eb5.js",
       "/_next/static/chunks/polyfills-42372ed130431b0a.js",
-      "/_next/static/chunks/webpack-59041051e025bed2.js",
+      "/_next/static/chunks/webpack-7a965fcf7a3dd467.js",
       "/_next/static/css/f66a596540e21bae.css",
-      "/_next/static/xnd5O8pwoie6Frwa7NG5m/_buildManifest.js",
-      "/_next/static/xnd5O8pwoie6Frwa7NG5m/_ssgManifest.js",
+      "/_next/static/wQ309Dfef85z9vk3PqRnl/_buildManifest.js",
+      "/_next/static/wQ309Dfef85z9vk3PqRnl/_ssgManifest.js",
+      "/about.html",
       "/index.html"
     ],
     "identifiers": {

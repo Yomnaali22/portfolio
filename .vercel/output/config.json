@@ -51,7 +51,7 @@
       "handle": "hit"
     },
     {
-      "src": "/_next/static/(?:[^/]+/pages|pages|chunks|runtime|css|image|media|xnd5O8pwoie6Frwa7NG5m)/.+",
+      "src": "/_next/static/(?:[^/]+/pages|pages|chunks|runtime|css|image|media|wQ309Dfef85z9vk3PqRnl)/.+",
       "headers": {
         "cache-control": "public,max-age=31536000,immutable"
       },
@@ -99,6 +99,10 @@
   "overrides": {
     "404.html": {
       "path": "404",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "about.html": {
+      "path": "about",
       "contentType": "text/html; charset=utf-8"
     },
     "index.html": {
