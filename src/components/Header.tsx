@@ -1,4 +1,5 @@
 export default function Header() {
+  console.log("hello");
   return (
     <header className="bg-gray-800 text-white py-4">
       <div className="container mx-auto flex justify-center md:justify-center items-center">
