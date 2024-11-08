@@ -4,6 +4,7 @@ const Footer: React.FC = () => {
   return (
     <footer>
       {/* Footer content */}
+      {console.log('hello')}
     </footer>
   );
 };
