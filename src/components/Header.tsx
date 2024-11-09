@@ -6,7 +6,7 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="container mx-auto flex justify-center md:justify-center items-center py-4">
+    <header className="container mx-auto flex justify-center md:justify-center items-center py-4" style={{ transition: theme.transition }}>
       <div className="container mx-auto flex justify-center md:justify-center items-center">
         {/* Centered Links */}
         <nav className="hidden md:flex space-x-8">

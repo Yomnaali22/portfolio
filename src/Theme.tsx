@@ -27,6 +27,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     backgroundColor: "#050507",
     headlinesFontColor: "#DFD9DB",
     sectionFontColor: "#D6B9AD",
+    transition: "background-color 0.3s ease, color 0.3s ease", // Add transition property
   };
 
   const [theme, setTheme] = useState(darkTheme);
@@ -38,6 +39,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
           backgroundColor: "#F6F4F6",
           headlinesFontColor: "#03045E",
           sectionFontColor: "#5E5652",
+          transition: "background-color 0.3s ease, color 0.3s ease", // Add transition property
         })
       : setTheme(darkTheme);
   };
