@@ -27,14 +27,14 @@ export default function Header() {
       </Link>
       <div className="container mx-auto flex justify-center md:justify-center items-center">
         {/* Centered Links */}
-        <nav className="hidden md:flex space-x-8 text-2xl">
+        <nav className="hidden md:flex space-x-8 text-xl">
           <Link href="#contact">Contact</Link>
           <Link href="#experience">Experience</Link>
           <Link href="#projects">Projects</Link>
         </nav>
 
         {/* Mobile Menu */}
-        <nav className="flex md:hidden space-x-4 text-2xl">
+        <nav className="flex md:hidden space-x-4 text-xl">
           <Link href="#contact" className="hover:text-gray-300">
             Contact
           </Link>
