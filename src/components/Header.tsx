@@ -1,7 +1,16 @@
+import { useTheme } from "@/Theme";
+
 export default function Header() {
-  console.log("hello");
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <header className="bg-gray-800 text-white py-4">
+    <header
+      className="py-4"
+      style={{
+        backgroundColor: theme.backgroundColor,
+        color: theme.headlinesFontColor,
+      }}
+    >
       <div className="container mx-auto flex justify-center md:justify-center items-center">
         {/* Centered Links */}
         <nav className="hidden md:flex space-x-8">
