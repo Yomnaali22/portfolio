@@ -26,5 +26,12 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
     "webp-converter": "^2.2.3"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "convert:webp": "cwebp public/images/*.png -o public/images/webp/"
   }
 }

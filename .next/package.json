@@ -1,1 +1,6 @@
-{"type": "commonjs"}
+{
+  "dependencies": {
+    "webp-converter": "2.2.3"
+  },
+  "type": "commonjs"
+}
