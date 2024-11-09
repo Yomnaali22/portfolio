@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "convert:webp": "cwebp public/images/*.png -o public/images/webp/"
+    "convert:webp": "mkdir -p public/images/webp && cwebp public/images/*.png -o public/images/webp/"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",
