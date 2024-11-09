@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
     <header className="container mx-auto flex justify-center md:justify-center items-center py-4">
-      <Link href="https://github.com/Yomnaali22?tab=overview&from=2024-10-01&to=2024-10-31">
+      <Link href="https://github.com/Yomnaali22?tab=overview&from=2024-10-01&to=2024-10-31" target="_blank" rel="noopener noreferrer">
         <img
           src="images/github.webp"
           alt="theme-icon"
