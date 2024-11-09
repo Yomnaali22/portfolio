@@ -1,12 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const Footer: React.FC = () => {
-  return (
-    <footer>
-      {/* Footer content */}
-      {console.log('hello')}
-    </footer>
-  );
+  return <div>Footer</div>;
 };
 
 export default Footer;
