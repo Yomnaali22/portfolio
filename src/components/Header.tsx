@@ -13,7 +13,7 @@ export default function Header() {
         color: theme.headlinesFontColor,
       }}
     >
-      <img src="/images/light.webp" alt="theme-icon" className="wd-37 h-37" />
+      <Image src="/images/light.webp" alt="theme-icon" width={37} height={37} />
       <div className="container mx-auto flex justify-center md:justify-center items-center">
         {/* Centered Links */}
         <nav className="hidden md:flex space-x-8">
