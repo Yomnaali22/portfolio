@@ -6,11 +6,21 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="container mx-auto flex justify-center md:justify-center items-center py-4" style={{ transition: theme.transition }}>
+    <header className="container mx-auto flex justify-center md:justify-center items-center py-4">
+      <Link href="https://github.com/Yomnaali22?tab=overview&from=2024-10-01&to=2024-10-31">
+        <img
+          src="images/github.webp"
+          alt="theme-icon"
+          style={{
+            width: 30,
+            height: 30,
+          }}
+        />
+      </Link>
       <div className="container mx-auto flex justify-center md:justify-center items-center">
         {/* Centered Links */}
         <nav className="hidden md:flex space-x-8">
-          <Link href="#contLinkct">Contact</Link>
+          <Link href="#contact">Contact</Link>
           <Link href="#experience">Experience</Link>
           <Link href="#projects">Projects</Link>
         </nav>
@@ -28,8 +38,15 @@ export default function Header() {
           </Link>
         </nav>
       </div>
-      <button className="wd-37 h-37" onClick={toggleTheme}>
-        <img src="images/light.webp" alt="theme-icon" />
+      <button onClick={toggleTheme}>
+        <img
+          src="images/light.webp"
+          alt="theme-icon"
+          style={{
+            width: 30,
+            height: 30,
+          }}
+        />
       </button>
     </header>
   );
