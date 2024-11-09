@@ -1,16 +1,24 @@
 import { useTheme } from "@/Theme";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
 
   return (
     <header className="container mx-auto flex justify-center md:justify-center items-center py-4">
-      <Link href="https://github.com/Yomnaali22?tab=overview&from=2024-10-01&to=2024-10-31" target="_blank" rel="noopener noreferrer">
+      <Link
+        href="https://github.com/Yomnaali22?tab=overview&from=2024-10-01&to=2024-10-31"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="github link"
+      >
         <img
-          src="images/github.webp"
-          alt="theme-icon"
+          src={
+            theme.backgroundTheme === "dark"
+              ? "images/github.webp"
+              : "images/githubWhiteMode.webp"
+          }
+          alt="change-theme-icon"
           style={{
             width: 30,
             height: 30,
@@ -40,7 +48,11 @@ export default function Header() {
       </div>
       <button onClick={toggleTheme}>
         <img
-          src="images/light.webp"
+          src={
+            theme.backgroundTheme === "dark"
+              ? "images/light.webp"
+              : "images/dark.webp"
+          }
           alt="theme-icon"
           style={{
             width: 30,
