@@ -10,5 +10,6 @@ out/
 .next
 
 
+libwebp-1.4.0-mac-arm64.tar.gz
 .aider*
 .env
