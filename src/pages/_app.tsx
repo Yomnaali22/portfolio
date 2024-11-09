@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "@/fonts/firacode.css";
 import type { AppProps } from "next/app";
 export const runtime = "experimental-edge";
 import { ThemeProvider } from "@/Theme";

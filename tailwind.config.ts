@@ -12,7 +12,7 @@ const config: Config = {
         backgroundColor: "red",
       },
       fontFamily: {
-        sans: ["Roboto", "Arial", "sans-serif"],
+        sans: ["Fira Code", "Roboto", "Arial", "sans-serif"],
       },
     },
   },
