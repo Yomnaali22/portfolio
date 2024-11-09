@@ -6,14 +6,7 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header
-      className="py-4"
-      style={{
-        backgroundColor: theme.backgroundColor,
-        color: theme.headlinesFontColor,
-      }}
-    >
-      <Image src="/images/light.webp" alt="theme-icon" width={37} height={37} />
+    <header className="container mx-auto flex justify-center md:justify-center items-center py-4">
       <div className="container mx-auto flex justify-center md:justify-center items-center">
         {/* Centered Links */}
         <nav className="hidden md:flex space-x-8">
@@ -35,6 +28,9 @@ export default function Header() {
           </Link>
         </nav>
       </div>
+      <button className="wd-37 h-37" onClick={toggleTheme}>
+        <img src="images/light.webp" alt="theme-icon" />
+      </button>
     </header>
   );
 }
