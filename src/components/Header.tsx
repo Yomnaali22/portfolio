@@ -38,7 +38,7 @@ export default function Header() {
       >
         {/* Centered Links */}
         <nav className="hidden md:flex space-x-20 text-lg">
-          <Link href="#contact" className="hover:text-white">
+          <Link href="#contact" style={{ color: theme.sectionFontColor, transition: "color 1s ease" }} className="hover:text-white">
             Contact
           </Link>
           <Link href="#experience" className="hover:text-white">
