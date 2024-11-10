@@ -1,9 +1,5 @@
 import { useTheme } from "@/Theme";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import IntroSection from "@/components/IntroSection";
-import ExperienceSection from "@/components/ExperienceSection";
-import ProjectsSection from "@/components/ProjectsSection";
+import { Header, Footer, IntroSection, ExperienceSection, ProjectsSection } from '@/components';
 
 export default function Home() {
   const { theme } = useTheme();
