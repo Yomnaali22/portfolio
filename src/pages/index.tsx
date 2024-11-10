@@ -1,5 +1,6 @@
 import { useTheme } from "@/Theme";
-import { Header, Footer, IntroSection, ExperienceSection, ProjectsSection } from '@/components';
+import { useTheme } from "@/Theme";
+import AllComponents from '@/components';
 
 export default function Home() {
   const { theme } = useTheme();
@@ -11,11 +12,7 @@ export default function Home() {
         transition: theme.transition,
       }}
     >
-      <Header />
-      <IntroSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <Footer />
+      <AllComponents />
     </div>
   );
 }
