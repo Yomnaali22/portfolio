@@ -6,16 +6,18 @@ import React, {
   ReactNode,
   useEffect,
 } from "react";
+interface Theme {
+  backgroundTheme: "light" | "dark";
+  backgroundColor: string;
+  headlinesFontColor: string;
+  sectionFontColor: string;
+  transition: string;
+}
 
 // Create a context for the theme
 const ThemeContext = createContext<
   | {
-      theme: {
-        backgroundTheme: string;
-        headlinesFontColor: string;
-        sectionFontColor: string;
-        backgroundColor: string;
-      };
+      theme: Theme;
       toggleTheme: () => void;
     }
   | undefined
@@ -27,7 +29,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     backgroundColor: "#050507",
     headlinesFontColor: "#DFD9DB",
     sectionFontColor: "#D6B9AD",
-    transition: "background-color 0.3s ease, color 0.3s ease", // Add transition property
+    transition: "background-color 1s ease, color 1s ease", // Add transition property
   };
 
   const [theme, setTheme] = useState(darkTheme);
@@ -39,13 +41,13 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
           backgroundColor: "#F6F4F6",
           headlinesFontColor: "#03045E",
           sectionFontColor: "#5E5652",
-          transition: "background-color 0.3s ease, color 0.3s ease", // Add transition property
+          transition: "background-color 1s ease, color 1s ease", // Add transition property
         })
       : setTheme(darkTheme);
   };
 
   useEffect(() => {
-    localStorage.setItem("theme", JSON.stringify(theme));
+    localStorage.setItem("theme", theme.backgroundTheme);
   }, [theme]);
 
   return (
