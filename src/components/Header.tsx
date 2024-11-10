@@ -40,19 +40,19 @@ export default function Header() {
         <nav className="hidden md:flex space-x-20 text-lg">
           <Link
             href="#contact"
-            style={{ color: theme.sectionFontColor, transition: "color 0.5s ease-in-out" }}
+            className="transition-colors duration-300 ease-in-out"
           >
             Contact
           </Link>
           <Link
             href="#experience"
-            style={{ color: theme.sectionFontColor, transition: "color 0.5s ease-in-out" }}
+            className="transition-colors duration-300 ease-in-out"
           >
             Experience
           </Link>
           <Link
             href="#projects"
-            style={{ color: theme.sectionFontColor, transition: "color 0.5s ease-in-out" }}
+            className="transition-colors duration-300 ease-in-out"
           >
             Projects
           </Link>
@@ -62,25 +62,25 @@ export default function Header() {
         <nav className="flex md:hidden space-x-12 text-lg">
           <Link
             href="#contact"
-            style={{ color: theme.sectionFontColor, transition: "color 0.3s ease-in-out" }}
+            className="transition-colors duration-300 ease-in-out"
           >
             Contact
           </Link>
           <Link
             href="#experience"
-            style={{ color: theme.sectionFontColor, transition: "color 0.3s ease-in-out" }}
+            className="transition-colors duration-300 ease-in-out"
           >
             Experience
           </Link>
           <Link
             href="#projects"
-            style={{ color: theme.sectionFontColor, transition: "color 0.3s ease-in-out" }}
+            className="transition-colors duration-300 ease-in-out"
           >
             Projects
           </Link>
         </nav>
       </div>
-      <button onClick={toggleTheme} style={{ transition: "filter 0.1s ease-in-out", filter: theme.backgroundTheme === 'dark' ? 'invert(1)' : 'none' }}>
+      <button onClick={toggleTheme}>
         <img
           src={
             theme.backgroundTheme === "dark"
