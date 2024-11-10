@@ -12,7 +12,9 @@ const config: Config = {
         backgroundColor: "red",
       },
       fontFamily: {
-        sans: ["Fira Code", "Roboto", "Arial", "sans-serif"],
+        firacodebold: ["FiraCodeBold", "monospace"],
+        firacoderegular: ["firaCodeRegular", "monospace"],
+        sans: ["Roboto", "Arial", "sans-serif"],
       },
     },
   },
