@@ -40,31 +40,32 @@ const ThemeContext = createContext<
   { theme: Theme; toggleTheme: () => void } | undefined
 >(undefined);
 
-import { useEffect } from 'react';
-
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-    const [theme, setTheme] = useState<Theme>(darkTheme);
+  const [theme, setTheme] = useState<Theme>(darkTheme);
 
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const storedThemeName = localStorage.getItem("themeName") as ThemeName | null;
-            if (storedThemeName) {
-                setTheme(storedThemeName === ThemeName.Light ? lightTheme : darkTheme);
-            }
-        }
-    }, []);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedThemeName = localStorage.getItem(
+        "themeName"
+      ) as ThemeName | null;
+      if (storedThemeName) {
+        setTheme(storedThemeName === ThemeName.Light ? lightTheme : darkTheme);
+      }
+    }
+  }, []);
 
-    const toggleTheme = () => {
-        setTheme(prevTheme => {
-            const newThemeName = prevTheme.backgroundTheme === ThemeName.Dark ? ThemeName.Light : ThemeName.Dark;
-            if (typeof window !== 'undefined') {
-                localStorage.setItem("themeName", newThemeName);
-            }
-
-            return newThemeName === ThemeName.Light ? lightTheme : darkTheme;
-        });
-    };
-
+  const toggleTheme = () => {
+    setTheme(prevTheme => {
+      const newThemeName =
+        prevTheme.backgroundTheme === ThemeName.Dark
+          ? ThemeName.Light
+          : ThemeName.Dark;
+      if (typeof window !== "undefined") {
+        localStorage.setItem("themeName", newThemeName);
+      }
+      return newThemeName === ThemeName.Light ? lightTheme : darkTheme;
+    });
+  };
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
