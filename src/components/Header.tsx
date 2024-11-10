@@ -40,19 +40,19 @@ export default function Header() {
         <nav className="hidden md:flex space-x-20 text-lg">
           <Link
             href="#contact"
-            className="transition-colors duration-300 ease-in-out"
+            style={{ color: theme.sectionFontColor, transition: "color 0.3s ease-in-out" }}
           >
             Contact
           </Link>
           <Link
             href="#experience"
-            className="transition-colors duration-300 ease-in-out"
+            style={{ color: theme.sectionFontColor, transition: "color 0.3s ease-in-out" }}
           >
             Experience
           </Link>
           <Link
             href="#projects"
-            className="transition-colors duration-300 ease-in-out"
+            style={{ color: theme.sectionFontColor, transition: "color 0.3s ease-in-out" }}
           >
             Projects
           </Link>
@@ -62,19 +62,19 @@ export default function Header() {
         <nav className="flex md:hidden space-x-12 text-lg">
           <Link
             href="#contact"
-            className="transition-colors duration-300 ease-in-out"
+            style={{ color: theme.sectionFontColor, transition: "color 0.3s ease-in-out" }}
           >
             Contact
           </Link>
           <Link
             href="#experience"
-            className="transition-colors duration-300 ease-in-out"
+            style={{ color: theme.sectionFontColor, transition: "color 0.3s ease-in-out" }}
           >
             Experience
           </Link>
           <Link
             href="#projects"
-            className="transition-colors duration-300 ease-in-out"
+            style={{ color: theme.sectionFontColor, transition: "color 0.3s ease-in-out" }}
           >
             Projects
           </Link>
