@@ -40,19 +40,19 @@ export default function Header() {
         <nav className="hidden md:flex space-x-20 text-lg">
           <Link
             href="#contact"
-            className="transition-colors duration-500 ease-in-out hover:text-white-500"
+            className="transition-colors duration-500 ease-in-out hover:text-white"
           >
             Contact
           </Link>
           <Link
             href="#experience"
-            className="transition-colors duration-500 ease-in-out hover:text-amber-500"
+            className="transition-colors duration-500 ease-in-out hover:text-white"
           >
             Experience
           </Link>
           <Link
             href="#projects"
-            className="transition-colors duration-500 ease-in-out hover:text-amber-500"
+            className="transition-colors duration-500 ease-in-out hover:text-white"
           >
             Projects
           </Link>
@@ -62,19 +62,19 @@ export default function Header() {
         <nav className="flex md:hidden space-x-12 text-lg">
           <Link
             href="#contact"
-            className="transition-colors duration-300 ease-in-out hover:text-amber-500"
+            className="transition-colors duration-300 ease-in-out hover:text-white"
           >
             Contact
           </Link>
           <Link
             href="#experience"
-            className="transition-colors duration-300 ease-in-out hover:text-amber-500"
+            className="transition-colors duration-300 ease-in-out hover:text-white"
           >
             Experience
           </Link>
           <Link
             href="#projects"
-            className="transition-colors duration-300 ease-in-out hover:text-amber-500"
+            className="transition-colors duration-300 ease-in-out hover:text-white"
           >
             Projects
           </Link>
