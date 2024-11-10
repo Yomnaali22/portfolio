@@ -5,7 +5,7 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="container mx-auto flex justify-center md:justify-center items-center py-4">
+    <header className="flex justify-evenly items-center mt-6 pl-5 pr-5 w-full">
       <Link
         href="https://github.com/Yomnaali22?tab=overview&from=2024-10-01&to=2024-10-31"
         target="_blank"
@@ -25,16 +25,21 @@ export default function Header() {
           }}
         />
       </Link>
-      <div className="container mx-auto flex justify-center md:justify-center items-center">
+      <div
+        style={{
+          color: theme.sectionFontColor,
+        }}
+        className="container mx-auto flex justify-center md:justify-center items-center"
+      >
         {/* Centered Links */}
-        <nav className="hidden md:flex space-x-8 text-xl">
+        <nav className="hidden md:flex space-x-20 text-lg">
           <Link href="#contact">Contact</Link>
           <Link href="#experience">Experience</Link>
           <Link href="#projects">Projects</Link>
         </nav>
 
         {/* Mobile Menu */}
-        <nav className="flex md:hidden space-x-4 text-xl">
+        <nav className="flex md:hidden space-x-12 text-lg">
           <Link href="#contact" className="hover:text-gray-300">
             Contact
           </Link>

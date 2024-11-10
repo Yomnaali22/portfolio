@@ -1,17 +1,5 @@
-import Header from './Header';
-import Footer from './Footer';
-import IntroSection from './IntroSection';
-import ExperienceSection from './ExperienceSection';
-import ProjectsSection from './ProjectsSection';
-
-const AllComponents = () => (
-  <>
-    <Header />
-    <IntroSection />
-    <ExperienceSection />
-    <ProjectsSection />
-    <Footer />
-  </>
-);
-
-export default AllComponents;
+export { default as Header } from "./Header";
+export { default as Footer } from "./Footer";
+export { default as IntroSection } from "./IntroSection";
+export { default as ExperienceSection } from "./ExperienceSection";
+export { default as ProjectsSection } from "./ProjectsSection";
