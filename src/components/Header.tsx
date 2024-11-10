@@ -38,20 +38,44 @@ export default function Header() {
       >
         {/* Centered Links */}
         <nav className="hidden md:flex space-x-20 text-lg">
-          <Link href="#contact" className="transition-colors duration-300 ease-in-out hover:text-amber-500">Contact</Link>
-          <Link href="#experience" className="transition-colors duration-300 ease-in-out hover:text-amber-500">Experience</Link>
-          <Link href="#projects" className="transition-colors duration-300 ease-in-out hover:text-amber-500">Projects</Link>
+          <Link
+            href="#contact"
+            className="transition-colors duration-500 ease-in-out hover:text-white-500"
+          >
+            Contact
+          </Link>
+          <Link
+            href="#experience"
+            className="transition-colors duration-500 ease-in-out hover:text-amber-500"
+          >
+            Experience
+          </Link>
+          <Link
+            href="#projects"
+            className="transition-colors duration-500 ease-in-out hover:text-amber-500"
+          >
+            Projects
+          </Link>
         </nav>
 
         {/* Mobile Menu */}
         <nav className="flex md:hidden space-x-12 text-lg">
-          <Link href="#contact" className="transition-colors duration-300 ease-in-out hover:text-amber-500">
+          <Link
+            href="#contact"
+            className="transition-colors duration-300 ease-in-out hover:text-amber-500"
+          >
             Contact
           </Link>
-          <Link href="#experience" className="transition-colors duration-300 ease-in-out hover:text-amber-500">
+          <Link
+            href="#experience"
+            className="transition-colors duration-300 ease-in-out hover:text-amber-500"
+          >
             Experience
           </Link>
-          <Link href="#projects" className="transition-colors duration-300 ease-in-out hover:text-amber-500">
+          <Link
+            href="#projects"
+            className="transition-colors duration-300 ease-in-out hover:text-amber-500"
+          >
             Projects
           </Link>
         </nav>
