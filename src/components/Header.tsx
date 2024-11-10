@@ -38,44 +38,26 @@ export default function Header() {
       >
         {/* Centered Links */}
         <nav className="hidden md:flex space-x-20 text-lg">
-          <Link
-            href="#contact"
-            style={{ color: theme.sectionFontColor, transition: "color 0.3s ease-in-out" }}
-          >
+          <Link href="#contact" className="hover:text-white">
             Contact
           </Link>
-          <Link
-            href="#experience"
-            style={{ color: theme.sectionFontColor, transition: "color 0.3s ease-in-out" }}
-          >
+          <Link href="#experience" className="hover:text-white">
             Experience
           </Link>
-          <Link
-            href="#projects"
-            style={{ color: theme.sectionFontColor, transition: "color 0.3s ease-in-out" }}
-          >
+          <Link href="#projects" className="hover:text-white">
             Projects
           </Link>
         </nav>
 
         {/* Mobile Menu */}
         <nav className="flex md:hidden space-x-12 text-lg">
-          <Link
-            href="#contact"
-            style={{ color: theme.sectionFontColor, transition: "color 0.3s ease-in-out" }}
-          >
+          <Link href="#contact" className="hover:text-white">
             Contact
           </Link>
-          <Link
-            href="#experience"
-            style={{ color: theme.sectionFontColor, transition: "color 0.3s ease-in-out" }}
-          >
+          <Link href="#experience" className="hover:text-white">
             Experience
           </Link>
-          <Link
-            href="#projects"
-            style={{ color: theme.sectionFontColor, transition: "color 0.3s ease-in-out" }}
-          >
+          <Link href="#projects" className="hover:text-white">
             Projects
           </Link>
         </nav>
