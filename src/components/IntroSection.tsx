@@ -12,7 +12,7 @@ const IntroSection: React.FC = () => {
     >
       <div className="flex flex-col ml-40">
         <p className="font-firacoderegular text-20px">Hi, Yomna here...</p>
-        <h1 className="font-firacodebold text-10px">Frontend Developer</h1>
+        <h1 className="font-firacodebold text-80px">Frontend Developer</h1>
         <p className="font-firacoderegular text-20px">
           Passionate about design, coding and utilizing the AI
         </p>
