@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "FiraCodeBold";
+  src: url("./../fonts/FiraCode-Bold.woff") format("woff");
+  font-weight: bold; /* Ensure this matches the actual weight of the font */
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
