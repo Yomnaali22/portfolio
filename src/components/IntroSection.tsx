@@ -11,9 +11,9 @@ const IntroSection: React.FC = () => {
       }}
     >
       <div className="flex flex-col ml-40">
-        <text>Hi, Yomna here...</text>
-        <h1>Frontend Developer</h1>
-        <text>Passionate about design, coding and utilizing the AI</text>
+        <p className="firacoderegular text-20px">Hi, Yomna here...</p>
+        <h1 className="firacoderegular text-20px">Frontend Developer</h1>
+        <p className="firacoderegular text-20px">Passionate about design, coding and utilizing the AI</p>
       </div>
       <Image
         src="/images/avatarGroup.webp"
