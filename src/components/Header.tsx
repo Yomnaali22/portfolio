@@ -5,7 +5,12 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="flex justify-evenly items-center mt-6 pl-5 pr-5 w-full">
+    <header
+      className="flex justify-evenly items-center mt-6 pl-5 pr-5 pb-5 w-full"
+      style={{
+        borderBottom: `1px solid ${theme.headlinesFontColor}`,
+      }}
+    >
       <Link
         href="https://github.com/Yomnaali22?tab=overview&from=2024-10-01&to=2024-10-31"
         target="_blank"
