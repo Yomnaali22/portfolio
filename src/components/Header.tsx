@@ -6,12 +6,6 @@ export default function Header() {
 
   return (
     <header className="flex justify-evenly items-center pt-6 pl-5 pr-5 pb-5 mb-10 w-full border-b-[0.1px] border-b-headlinesFontColor">
-      <Link
-        href="https://github.com/Yomnaali22?tab=overview&from=2024-10-01&to=2024-10-31"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="github link"
-      >
         <Link href="https://github.com/Yomnaali22?tab=overview&from=2024-10-01&to=2024-10-31" target="_blank" rel="noopener noreferrer" aria-label="My Github Profile">
           <img
             src={!theme ? "images/github.webp" : "images/githubWhiteMode.webp"}
