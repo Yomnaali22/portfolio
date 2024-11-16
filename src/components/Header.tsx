@@ -1,16 +1,11 @@
-import { useTheme } from "@/Theme";
+import useTheme from "@/useTheme";
 import Link from "next/link";
 
 export default function Header() {
-  const { theme, toggleTheme } = useTheme();
+  const { toggle, theme } = useTheme();
 
   return (
-    <header
-      className="flex justify-evenly items-center mt-6 pl-5 pr-5 pb-5 w-full"
-      style={{
-        borderBottom: `1px solid ${theme.headlinesFontColor}`,
-      }}
-    >
+    <header className="flex justify-evenly items-center pt-6 pl-5 pr-5 pb-5 mb-10 w-full border-b-[0.1px] border-b-headlinesFontColor">
       <Link
         href="https://github.com/Yomnaali22?tab=overview&from=2024-10-01&to=2024-10-31"
         target="_blank"
@@ -18,62 +13,59 @@ export default function Header() {
         aria-label="github link"
       >
         <img
-          src={
-            theme.backgroundTheme === "dark"
-              ? "images/github.webp"
-              : "images/githubWhiteMode.webp"
-          }
+          src={!theme ? "images/github.webp" : "images/githubWhiteMode.webp"}
           alt="change-theme-icon"
-          style={{
-            width: 30,
-            height: 30,
-          }}
+          className="w-10 h-10"
         />
       </Link>
-      <div
-        style={{
-          color: theme.sectionFontColor,
-        }}
-        className="container mx-auto flex justify-center md:justify-center items-center"
-      >
-        {/* Centered Links */}
-        <nav className="hidden md:flex space-x-20 text-lg">
-          <Link href="#contact" style={{ color: theme.sectionFontColor, transition: "color 1s ease" }} className="hover:text-white">
-            Contact
-          </Link>
-          <Link href="#experience" className="hover:text-white">
-            Experience
-          </Link>
-          <Link href="#projects" className="hover:text-white">
-            Projects
-          </Link>
-        </nav>
+      {/* Centered Links */}
+      <nav className="container mx-auto flex justify-center md:justify-center items-center text-sectionFontColor hidden md:flex space-x-20 text-lg">
+        <Link
+          href="#contact"
+          className="hover:text-hoverColor transition duration-300 ease-in-out"
+        >
+          Contact
+        </Link>
+        <Link
+          href="#experience"
+          className="hover:text-hoverColor transition duration-300 ease-in-out"
+        >
+          Experience
+        </Link>
+        <Link
+          href="#projects"
+          className="hover:text-hoverColor transition duration-300 ease-in-out"
+        >
+          Projects
+        </Link>
+      </nav>
 
-        {/* Mobile Menu */}
-        <nav className="flex md:hidden space-x-12 text-lg">
-          <Link href="#contact" className="hover:text-white">
-            Contact
-          </Link>
-          <Link href="#experience" className="hover:text-white">
-            Experience
-          </Link>
-          <Link href="#projects" className="hover:text-white">
-            Projects
-          </Link>
-        </nav>
-      </div>
-      <button onClick={toggleTheme}>
+      {/* Mobile Menu */}
+      <nav className="flex md:hidden space-x-12 text-lg">
+        <Link
+          href="#contact"
+          className="hover:text-hoverColor transition duration-300 ease-in-out"
+        >
+          Contact
+        </Link>
+        <Link
+          href="#experience"
+          className="hover:text-hoverColor transition duration-300 ease-in-out"
+        >
+          Experience
+        </Link>
+        <Link
+          href="#projects"
+          className="hover:text-hoverColor transition duration-300 ease-in-out"
+        >
+          Projects
+        </Link>
+      </nav>
+      <button onClick={toggle}>
         <img
-          src={
-            theme.backgroundTheme === "dark"
-              ? "images/light.webp"
-              : "images/dark.webp"
-          }
+          src={!theme ? "images/light.webp" : "images/dark.webp"}
           alt="theme-icon"
-          style={{
-            width: 30,
-            height: 30,
-          }}
+          className="w-10 h-10"
         />
       </button>
     </header>
