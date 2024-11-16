@@ -34,26 +34,6 @@ export default function Header() {
         >
           My Projects
         </Link>
-      </nav>
-        <Link
-          href="#contact"
-          className="hover:text-hoverColor transition duration-300 ease-in-out"
-        >
-          Contact
-        </Link>
-        <Link
-          href="#experience"
-          className="hover:text-hoverColor transition duration-300 ease-in-out"
-        >
-          Experience
-        </Link>
-        <Link
-          href="#projects"
-          className="hover:text-hoverColor transition duration-300 ease-in-out"
-        >
-          Projects
-        </Link>
-      </nav>
       <button onClick={toggle}>
         <img
           src={!theme ? "images/light.webp" : "images/dark.webp"}
