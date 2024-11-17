@@ -1,32 +1,28 @@
-@font-face {
-  font-family: "FiraCodeBold";
-  src: url("./../fonts/FiraCode-Bold.woff") format("woff");
-  font-weight: bold; /* Ensure this matches the actual weight of the font */
-  font-style: normal;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #E5E5E5;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #171717;
-    --foreground: #ededed;
+@layer base {
+
+  @import "theme.css";
   }
-}
 
 body {
-  color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;      /* Scales the image to cover the entire container */
+  background-position: center;  /* Centers the image within the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  width: 100vw;                 /* Full viewport width */
+  height: 100vw;  
 }
 
+@font-face {
+  font-family: "FiraCodeSemiBold";
+  src: url("./../fonts/FiraCode-SemiBold.woff") format("woff");
+  font-weight: bold; /* Ensure this matches the actual weight of the font */
+  font-style: normal;
+}
 @font-face {                                                                                                                                          
   font-family: "FiraCodeBold";                                                                                                                        
   src: url("./../fonts/FiraCode-Bold.woff") format("woff");                                                                                           
@@ -39,13 +35,32 @@ body {
   src: url("./../fonts/FiraCode-Regular.woff") format("woff");                                                                                           
   font-weight: normal; /* Ensure this matches the actual weight of the font */                                                                          
   font-style: normal;                                                                                                                                 
-}       
+}
+
+
               
 
 .text-80px {                                                                                                                                          
-  font-size: 85px;                                                                                                                                    
+  font-size: 90px;                                                                                                                                    
 } 
 
 .text-20px {                                                                                                                                          
-  font-size: 30px;                                                                                                                                    
-}                        
+  font-size: 35px;                                                                                                                                    
+}               
+         
+
+.delay-200 {
+  animation-delay: 200ms; /* 200 milliseconds delay */
+}
+
+.delay-0 {
+  animation-delay: 0ms; /* No delay */
+}
+
+.delay-300 {
+  animation-delay: 300ms; /* No delay */
+}
+
+.delay-400 {
+  animation-delay: 400ms; /* No delay */
+}
