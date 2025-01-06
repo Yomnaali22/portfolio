@@ -1,18 +1,21 @@
-import { useTheme } from "@/Theme";
-import { useTheme } from "@/Theme";
-import AllComponents from '@/components';
+import {
+  Header,
+  Footer,
+  IntroSection,
+  ExperienceSection,
+  ProjectsSection,
+} from "@/components";
 
 export default function Home() {
-  const { theme } = useTheme();
   return (
-    <div
-      className="font-firacoderegular w-full"
-      style={{
-        backgroundColor: theme.backgroundColor,
-        transition: theme.transition,
-      }}
-    >
-      <AllComponents />
-    </div>
+    <>
+      <Header />
+      <div className="flex flex-col gap-52 responsive-padding">
+        <IntroSection />
+        <ExperienceSection />
+        <ProjectsSection />
+      </div>
+      <Footer />
+    </>
   );
 }
