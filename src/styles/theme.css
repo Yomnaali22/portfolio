@@ -1,20 +1,19 @@
-html[data-theme="light-theme"] {
+html.light-theme {
     --background: #F6F4F6;
     --headlinesFontColor: #03045E;
     --hoverColor: #000000;
     --sectionFontColor: #5E5652;
     --transition: background-color 0.5s ease, color 0.5s ease;
     --hoverText: #F6F4F6;
-    --hoverBackground: #03045E
+    --hoverBackground: #03045E;
 }
 
-
-html[data-theme="dark-theme"] {
+html.dark-theme {
     --background: linear-gradient(200deg, #050507, #202026);
     --headlinesFontColor: #DFD9DB;
     --sectionFontColor: #D6B9AD;
     --hoverColor: #ffffff;
     --transition: background-color 0.5s ease, color 0.5s ease;
     --hoverText: #000000;
-    --hoverBackground: #F6F4F6
+    --hoverBackground: #F6F4F6;
 }

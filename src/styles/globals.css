@@ -4,49 +4,65 @@
 
 
 @layer base {
-
   @import "theme.css";
+  .responsive-padding {
+    @apply md:pl-20 md:pr-20 sm:pl-16 sm:pr-16 xs:pl-10 xs:pr-10;
   }
+}
 
 body {
   background: var(--background);
   background-size: cover;      /* Scales the image to cover the entire container */
   background-position: center;  /* Centers the image within the container */
   background-repeat: no-repeat; /* Prevents the image from repeating */
-  width: 100vw;                 /* Full viewport width */
-  height: 100vw;  
+
 }
 
+
+html {
+  font-family: var(--fonts);
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+  scroll-behavior: smooth;
+
+
+}
+
+html::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
 @font-face {
   font-family: "FiraCodeSemiBold";
   src: url("./../fonts/FiraCode-SemiBold.woff") format("woff");
   font-weight: bold; /* Ensure this matches the actual weight of the font */
   font-style: normal;
+  font-display: swap; /* This will show fallback font until the custom font is loaded */
+
 }
 @font-face {                                                                                                                                          
   font-family: "FiraCodeBold";                                                                                                                        
   src: url("./../fonts/FiraCode-Bold.woff") format("woff");                                                                                           
   font-weight: bold; /* Ensure this matches the actual weight of the font */                                                                          
-  font-style: normal;                                                                                                                                 
+  font-style: normal;    
+  font-display: swap; /* This will show fallback font until the custom font is loaded */
 } 
 
 @font-face {                                                                                                                                          
   font-family: "FiraCodeRegular";                                                                                                                        
   src: url("./../fonts/FiraCode-Regular.woff") format("woff");                                                                                           
   font-weight: normal; /* Ensure this matches the actual weight of the font */                                                                          
-  font-style: normal;                                                                                                                                 
-}
+  font-style: normal;       
+  font-display: swap; /* This will show fallback font until the custom font is loaded */
+                                                                                                                          
+}    
 
-
-              
-
-.text-80px {                                                                                                                                          
+/* .text-80px {                                                                                                                                          
   font-size: 90px;                                                                                                                                    
 } 
 
 .text-20px {                                                                                                                                          
   font-size: 35px;                                                                                                                                    
-}               
+}                */
          
 
 .delay-200 {

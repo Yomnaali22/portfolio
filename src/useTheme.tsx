@@ -5,16 +5,21 @@ const useTheme = () => {
   const [theme, setTheme] = useState(false);
 
   // toggle function
-
   const toggle = () => {
     setTheme(!theme);
   };
 
   useEffect(() => {
+    // Remove existing theme classes
+    document
+      .querySelector("html")
+      ?.classList.remove("dark-theme", "light-theme");
+
+    // Add the appropriate theme class
     if (!theme) {
-      document.querySelector("html")?.setAttribute("data-theme", "dark-theme");
+      document.querySelector("html")?.classList.add("dark-theme");
     } else {
-      document.querySelector("html")?.setAttribute("data-theme", "light-theme");
+      document.querySelector("html")?.classList.add("light-theme");
     }
   }, [theme]);
 
