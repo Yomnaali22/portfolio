@@ -53,7 +53,7 @@ const ProjectsSection: React.FC = () => {
                   alt={`Project ${project.id}`}
                   className="w-full h-full object-cover rounded-3xl"
                 />
-                <div className="absolute inset-0 bg-white bg-opacity-30 hover:opacity-0 opacity-100 transition-opacity duration-300 rounded-3xl">
+                <div className="absolute inset-0 bg-black bg-opacity-30 hover:opacity-0 opacity-100 transition-opacity duration-300 rounded-3xl">
                   <img
                     src="/images/opentab.webp"
                     className="opacity-50 w-16 h-16 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
