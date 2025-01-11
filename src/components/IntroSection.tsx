@@ -4,7 +4,7 @@ import Link from "next/link";
 const IntroSection: React.FC = () => {
   return (
     <>
-      <div className="flex xs:flex-col-reverse flex-row xs:justify-start xs:items-start justify-between items-center marginTop text-sectionFontColor">
+      <div className="mt-40 flex xs:flex-col-reverse flex-row xs:justify-start xs:items-start justify-between items-center marginTop text-sectionFontColor">
         <div className="flex flex-col gap-3">
           <h1 className="font-firacoderegular lg:text-3xl md:text-3xl mb-10 animate-move-up ease-in-out">
             Hello, Yomna here,

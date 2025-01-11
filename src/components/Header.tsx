@@ -82,7 +82,8 @@ export default function Header() {
 
   return (
     <header
-      className="p top-0 flex justify-between items-center pt-6 pl-6 pr-6 pb-5 mb-10 w-full border-b-[0.1px] border-b-headlinesFontColor"
+      style={{ background: "var(--background)" }}
+      className="bg-background fixed z-50 flex justify-between items-center pt-6 pl-6 pr-6 pb-5 w-full border-b-[0.1px] border-b-headlinesFontColor"
       role="banner"
     >
       <Link

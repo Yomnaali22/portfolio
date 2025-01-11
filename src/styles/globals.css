@@ -1,15 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import "theme.css";
 
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 
 @layer base {
-
-  
   body {
     background: var(--background);
   }
@@ -19,7 +17,7 @@
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
     scroll-behavior: smooth;
-  
+    background: var(--background);
   }
 
   .responsive-padding {
@@ -34,6 +32,7 @@
  .projectCardBorderRadius {
   @apply xl:rounded-3xl lg:rounded-3xl md:rounded-2xl sm:rounded-xl xs:rounded-xl
 }
+
 }
 
 
