@@ -1,4 +1,3 @@
-import { FontWeight } from "./node_modules/csstype/index.d";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -43,6 +42,7 @@ const config: Config = {
           "100%": {
             transform: "translateX(0)",
             color: "var(--headlinesFontColor)",
+            scale: "1.05",
           },
         },
         fadeInOut: {
@@ -63,11 +63,11 @@ const config: Config = {
         moveUp: {
           "0%": {
             opacity: "0",
-            transform: "translateY(60px)",
+            transform: "translateY(100px)",
           },
           "100%": {
             opacity: "1",
-            transform: "translateY(0)",
+            transform: "translateY(30px)",
           },
         },
 
@@ -89,6 +89,7 @@ const config: Config = {
         hoverColor: "var(--hoverColor)",
         hoverBackground: "var(--hoverBackground)",
         hoverText: "var(--hoverText)",
+        backgroundTransitionColor: "var(--backgroundTransitionColor)",
       },
       fontFamily: {
         firacodebold: ["FiraCodeBold", "monospace"],
