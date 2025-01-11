@@ -1,32 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "theme.css";
+
+
+
 
 
 @layer base {
-  @import "theme.css";
+
+  
+  body {
+    background: var(--background);
+  }
+  
+  html {
+    font-family: var(--fonts);
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    scroll-behavior: smooth;
+  
+  }
+
   .responsive-padding {
     @apply md:pl-20 md:pr-20 sm:pl-16 sm:pr-16 xs:pl-10 xs:pr-10;
   }
+  .marginTop{
+   @apply mt-10 md:mt-10 sm:mt-5 xs:mt-5;
+  }
+ .pageSpacing {
+   @apply xl:gap-52 lg:gap-52 md:gap-32 sm:gap-20 xs:gap-20;
+ }
+ .projectCardBorderRadius {
+  @apply xl:rounded-3xl lg:rounded-3xl md:rounded-2xl sm:rounded-xl xs:rounded-xl
+}
 }
 
-body {
-  background: var(--background);
-  background-size: cover;      /* Scales the image to cover the entire container */
-  background-position: center;  /* Centers the image within the container */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-
-}
-
-
-html {
-  font-family: var(--fonts);
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-  scroll-behavior: smooth;
-
-
-}
 
 html::-webkit-scrollbar { 
   display: none;  /* Safari and Chrome */
@@ -55,15 +64,6 @@ html::-webkit-scrollbar {
   font-display: swap; /* This will show fallback font until the custom font is loaded */
                                                                                                                           
 }    
-
-/* .text-80px {                                                                                                                                          
-  font-size: 90px;                                                                                                                                    
-} 
-
-.text-20px {                                                                                                                                          
-  font-size: 35px;                                                                                                                                    
-}                */
-         
 
 .delay-200 {
   animation-delay: 200ms; /* 200 milliseconds delay */

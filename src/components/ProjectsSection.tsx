@@ -3,57 +3,66 @@ import { InView } from "react-intersection-observer";
 
 const projects = [
   {
-    link: "/images/opleglandingpage.webp",
+    image: "/images/opleglandingpage.webp",
     id: "1",
+    description: "Opleg Landing Page",
+    link: "https://opleg.com/",
   },
   {
-    link: "/images/landingpage.webp",
-    id: "2",
-  },
-  {
-    link: "/images/ecommerce.webp",
+    image: "/images/ecommerce.webp",
     id: "3",
+    description: "Ecommerce",
+    link: "https://opleg.com/",
   },
   {
-    link: "/images/movieswebsite.webp",
+    image: "/images/landingpage.webp",
+    id: "2",
+    description: "Landing Page",
+    link: "https://opleg.com/",
+  },
+  {
+    image: "/images/movieswebsite.webp",
     id: "4",
+    description: "Movies Website",
+    link: "https://opleg.com/",
   },
 ];
 
 const ProjectsSection: React.FC = () => {
   return (
-    <InView threshold={0.01}>
+    <InView threshold={0.0}>
       {({ inView, ref, entry }) => (
         <div
           id="projects"
           ref={ref}
           className={
             inView
-              ? "flex flex-col flex-wrap  gap-14  w-full animate-move-up"
-              : "flex flex-col flex-wrap  gap-14  w-full"
+              ? "projects grid grid-rows-1 gap-20 w-full animate-move-up"
+              : "grid grid-rows-1 gap-20 w-full"
           }
-          aria-label="Projects"
+          aria-label="projects-title"
         >
           <h6 className="font-firacodebold text-2xl md:text-8xl text-headlinesFontColor">
             PROJECTS
           </h6>
           <section
-            className="flex flex-row flex-wrap  gap-16  justify-around w-full"
+            className="project-section gap-20 pl-12 grid grid-cols-2 justify-center items-center gap-10 pb-20"
             aria-label="Projects"
           >
             {projects.map(project => (
               <Link
+                aria-label={project.description}
                 href={project.link}
                 target="_blank"
                 key={project.id}
-                className={`transition-transform duration-900 ease-in-out transform hover:scale-105 border rounded-3xl cursor-pointer flex flex-row flex-wrap justify-center align-center w-1/3 h-auto`}
+                className={`col-span-1 h-[100%] w-[90%] transition-transform duration-900 ease-in-out transform projectCardBorderRadius cursor-pointer flex flex-row flex-wrap justify-center`}
               >
                 <img
-                  src={project.link}
+                  src={project.image}
                   alt={`Project ${project.id}`}
                   className="w-full h-full object-cover rounded-3xl"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-30 hover:opacity-0 opacity-100 transition-opacity duration-300 rounded-3xl">
+                <div className="absolute inset-0 bg-backgroundTransitionColor bg-opacity-30 hover:opacity-0 opacity-100 transition-opacity duration-300 rounded-3xl">
                   <img
                     src="/images/opentab.webp"
                     className="opacity-50 w-16 h-16 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"

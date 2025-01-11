@@ -6,8 +6,8 @@ html.light-theme {
     --transition: background-color 0.5s ease, color 0.5s ease;
     --hoverText: #F6F4F6;
     --hoverBackground: #03045E;
+    --backgroundTransitionColor: rgba(0, 0, 0, 0.1);
 }
-
 html.dark-theme {
     --background: linear-gradient(200deg, #050507, #202026);
     --headlinesFontColor: #DFD9DB;
@@ -16,4 +16,6 @@ html.dark-theme {
     --transition: background-color 0.5s ease, color 0.5s ease;
     --hoverText: #000000;
     --hoverBackground: #F6F4F6;
+    --backgroundTransitionColor: rgba(0, 0, 0, 0.5);
+
 }

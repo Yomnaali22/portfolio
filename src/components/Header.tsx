@@ -1,7 +1,8 @@
-import useTheme from "@/useTheme";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { context } from "./../useTheme";
+
 const MediaQuery = dynamic(() => import("react-responsive"), { ssr: false });
 const MenuItems = ({ isMobile }: { isMobile?: boolean }) => {
   const classname = `${
@@ -24,7 +25,7 @@ const MenuItems = ({ isMobile }: { isMobile?: boolean }) => {
 };
 
 export default function Header() {
-  const { toggle, theme } = useTheme();
+  const { toggle, theme } = useContext(context);
 
   const ToggleThemeButton = () => (
     <button onClick={toggle} aria-label="Toggle Theme">
@@ -44,7 +45,7 @@ export default function Header() {
     };
 
     return (
-      <div className="flex gap-5">
+      <div className="flex  gap-5">
         <button
           onClick={toggleMenu}
           aria-label="Menu"
@@ -81,7 +82,7 @@ export default function Header() {
 
   return (
     <header
-      className="flex justify-between items-center pt-6 pl-6 pr-6 pb-5 mb-10 w-full border-b-[0.1px] border-b-headlinesFontColor"
+      className="p top-0 flex justify-between items-center pt-6 pl-6 pr-6 pb-5 mb-10 w-full border-b-[0.1px] border-b-headlinesFontColor"
       role="banner"
     >
       <Link
