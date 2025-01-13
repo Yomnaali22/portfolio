@@ -1,11 +1,8 @@
-import {
-  Header,
-  Footer,
-  IntroSection,
-  ExperienceSection,
-  ProjectsSection,
-} from "@/components";
+import { Header, Footer, IntroSection, ExperienceSection } from "@/components";
 import ThemeProvider from "@/useTheme";
+import dynamic from "next/dynamic";
+
+const ProjectsSection = dynamic(() => import("@/components/ProjectsSection"));
 
 export default function Home() {
   return (

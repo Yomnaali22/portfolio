@@ -1,4 +1,4 @@
-import "@/styles/globals.css";
+import "../styles/globals.css";
 import type { AppProps } from "next/app";
 export const runtime = "experimental-edge";
 import localFont from "next/font/local";
@@ -28,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
     >
       <Head>
         <title>Portfolio:Yomna Ali</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
           content="Yomna Ali is a Frontend Developer (React)"

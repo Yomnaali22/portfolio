@@ -6,12 +6,10 @@
 @tailwind utilities;
 
 
-
 @layer base {
   body {
     background: var(--background);
   }
-  
   html {
     font-family: var(--fonts);
     -ms-overflow-style: none;  /* Internet Explorer 10+ */

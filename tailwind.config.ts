@@ -32,6 +32,7 @@ const config: Config = {
         "move-up": "moveUp 1s ease forwards",
         "fade-in-out": "infinite fadeInOut 1.5s ease-in-out forwards",
         "move-left": "moveLeft 1s ease forwards",
+        "fade-in": "fadeIn 0.2s ease-in forwards",
       },
       keyframes: {
         moveLeft: {
@@ -44,6 +45,16 @@ const config: Config = {
             color: "var(--headlinesFontColor)",
             scale: "1.05",
           },
+        },
+        fadeIn: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-10px)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)"
+          }
         },
         fadeInOut: {
           "0%": {

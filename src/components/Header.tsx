@@ -1,6 +1,6 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { context } from "./../useTheme";
 
 const MediaQuery = dynamic(() => import("react-responsive"), { ssr: false });
@@ -28,7 +28,7 @@ export default function Header() {
   const { toggle, theme } = useContext(context);
 
   const ToggleThemeButton = () => (
-    <button onClick={toggle} aria-label="Toggle Theme">
+    <button onClick={toggle} aria-label="Toggle Theme button">
       <img
         src={!theme ? "images/light.webp" : "images/dark.webp"}
         alt="Toggle Theme Icon"
@@ -44,12 +44,34 @@ export default function Header() {
       setIsOpen(!isOpen);
     };
 
+    // Close menu when clicking outside
+    useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+        const menu = document.getElementById("mobile-menu");
+        const button = document.getElementById("menu-button");
+        if (
+          menu &&
+          !menu.contains(event.target as Node) &&
+          button &&
+          !button.contains(event.target as Node)
+        ) {
+          setIsOpen(false);
+        }
+      };
+
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, []);
+
     return (
-      <div className="flex  gap-5">
+      <div className="flex gap-5 relative">
         <button
+          id="menu-button"
           onClick={toggleMenu}
-          aria-label="Menu"
-          className="cursor-pointer"
+          aria-label="Open Menu Button"
+          className="cursor-pointer hover:opacity-80 transition-opacity duration-200 relative z-20"
         >
           <svg
             x="0px"
@@ -57,11 +79,11 @@ export default function Header() {
             width="70"
             height="70"
             viewBox="0 0 50 50"
-            stroke="text-sectionFontColor"
             className="size-6 text-sectionFontColor"
           >
             <path
-              className="stroke-current" // Ensure the stroke uses
+              className="stroke-current"
+              strokeWidth="3"
               d="M 5 9 L 5 11 L 45 11 L 45 9 L 5 9 z M 5 24 L 5 26 L 45 26 L 45 24 L 5 24 z M 5 39 L 5 41 L 45 41 L 45 39 L 5 39 z"
             />
           </svg>
@@ -69,8 +91,11 @@ export default function Header() {
 
         {isOpen && (
           <ul
-            className="w-40 h-32 bg-background text-sectionFontColor absolute mt-2 w-51 bg-white rounded-md shadow-lg z-10 flex flex-col transform -translate-x-[3rem] -translate-y-[-1rem]"
-            // tabIndex={0}
+            id="mobile-menu"
+            className="w-48 bg-background text-sectionFontColor absolute mt-2 rounded-lg shadow-xl z-10 
+                     flex flex-col right-2 p-4 top-8
+                     border border-headlinesFontColor/20 backdrop-blur-sm
+                     animate-fadeIn"
           >
             <MenuItems isMobile={isMobile} />
           </ul>

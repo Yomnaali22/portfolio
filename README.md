@@ -8,6 +8,7 @@ This project showcases my frontend development skills using Next.js.  It's a dyn
 * **React:** A JavaScript library for building user interfaces.
 * **TypeScript:** A typed superset of JavaScript that enhances code maintainability and scalability.
 * **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
+* **react-intersection-observer:** A library for detecting when elements enter the viewport.
 * **Other relevant technologies:** (List any other technologies used, e.g., specific libraries, APIs, databases, etc.)
 
 ## Project Features
@@ -15,6 +16,7 @@ This project showcases my frontend development skills using Next.js.  It's a dyn
 * **Responsive Design:** Adapts seamlessly to different screen sizes.
 * **Dynamic Content:**  (Describe any dynamic features, e.g., data fetching, API integration, etc.)
 * **Interactive Elements:** (Describe any interactive elements, e.g., animations, forms, etc.)
+* **Dynamic Theme Switching:** Allows users to toggle between light and dark themes.
 * **(Add more features as needed)**
 
 ## Getting Started
