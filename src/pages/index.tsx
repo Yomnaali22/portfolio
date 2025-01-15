@@ -24,6 +24,8 @@ const Carousel = ({ comps }) => {
     setCurrentIndex(index);
   };
 
+  const components = [<IntroSection />, <ExperienceSection />, <ProjectsSection />];
+
   return (
     <div className="carousel">
       <button className="left-arrow" onClick={goToPrevious}>
@@ -32,18 +34,22 @@ const Carousel = ({ comps }) => {
       <button className="right-arrow" onClick={goToNext}>
         ❯
       </button>
+      {components.map((Component, index) => (
+        <div
+          key={index}
+          className={`slide ${index === currentIndex ? "active" : "hidden"}`}
+        >
+          <Component />
+        </div>
+      ))}
       <div className="dots">
-        {[<IntroSection />, <ExperienceSection />, <ProjectsSection />].map(
-          (Component, index) => (
-            <div
-              key={index}
-              className={`dot ${index === currentIndex ? "active" : ""}`}
-              onClick={() => goToSlide(index)}
-            >
-              <Component />
-            </div>
-          )
-        )}
+        {components.map((_, index) => (
+          <div
+            key={index}
+            className={`dot ${index === currentIndex ? "active" : ""}`}
+            onClick={() => goToSlide(index)}
+          ></div>
+        ))}
       </div>
     </div>
   );
