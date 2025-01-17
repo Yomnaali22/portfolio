@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useCarousel = comps => {
+const useCarousel = (comps: []) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
@@ -15,7 +15,7 @@ const useCarousel = comps => {
     setCurrentIndex(newIndex);
   };
 
-  const goToSlide = index => {
+  const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
 

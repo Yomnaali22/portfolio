@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST="{\"components/Header.tsx -> react-responsive\":{\"id\":\"components/Header.tsx -> react-responsive\",\"files\":[\"static/chunks/node_modules_react-responsive_dist_esm_index_js.js\"]},\"pages/index.tsx -> @/components/ProjectsSection\":{\"id\":\"pages/index.tsx -> @/components/ProjectsSection\",\"files\":[]}}"
