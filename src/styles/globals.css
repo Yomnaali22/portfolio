@@ -1,9 +1,14 @@
-@import "theme.css";
-
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "theme.css";
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
 
 
 @layer base {
@@ -32,7 +37,6 @@
 }
 
 }
-
 
 html::-webkit-scrollbar { 
   display: none;  /* Safari and Chrome */
@@ -76,4 +80,47 @@ html::-webkit-scrollbar {
 
 .delay-400 {
   animation-delay: 400ms; /* No delay */
+}
+
+
+/* Base responsive utilities */
+@layer utilities {
+  .container-padding {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+  
+  .responsive-text {
+    @apply text-base md:text-lg lg:text-xl;
+  }
+  
+  .section-spacing {
+    @apply my-8 md:my-12 lg:my-16;
+  }
+ 
+}
+
+
+@layer components {
+  .mobile-menu {
+    @apply w-56 bg-background text-sectionFontColor absolute mt-2 rounded-lg shadow-xl z-10 
+           flex flex-col right-0 p-2 top-12 border border-headlinesFontColor backdrop-blur-sm
+           animate-fade-in
+  }
+
+  .scrollButton {
+    @apply w-56 bg-background text-sectionFontColor absolute mt-2 rounded-lg shadow-xl z-10 
+          backdrop-blur-sm animate-fade-in
+  }
+  .nav-link {
+    @apply hover:text-hoverColor transition duration-300 ease-in-out;
+  }
+  
+  .responsive-container {
+    @apply w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-8 md:py-12 lg:py-16;
+  }
+  
 }

@@ -29,12 +29,17 @@ const config: Config = {
         "10": "1.6rem", // This should be present
       },
       animation: {
+        float: "float 2s ease-in-out infinite",
         "move-up": "moveUp 1s ease forwards",
         "fade-in-out": "infinite fadeInOut 1.5s ease-in-out forwards",
         "move-left": "moveLeft 1s ease forwards",
         "fade-in": "fadeIn 0.2s ease-in forwards",
       },
       keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
         moveLeft: {
           "0%": {
             transform: "translateX(60px)",
@@ -49,12 +54,12 @@ const config: Config = {
         fadeIn: {
           "0%": {
             opacity: "0",
-            transform: "translateY(-10px)"
+            transform: "translateY(-10px)",
           },
           "100%": {
             opacity: "1",
-            transform: "translateY(0)"
-          }
+            transform: "translateY(10px)",
+          },
         },
         fadeInOut: {
           "0%": {

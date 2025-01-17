@@ -5,7 +5,7 @@ html.light-theme {
     --sectionFontColor: #5E5652;
     --transition: background-color 0.5s ease, color 0.5s ease;
     --hoverText: #F6F4F6;
-    --hoverBackground: #03045E;
+    --hoverBackground: rgb(3, 4, 94, 0.1); /* Changed from #03045E to rgb */
     --backgroundTransitionColor: rgba(0, 0, 0, 0.1);
 }
 html.dark-theme {
@@ -15,7 +15,7 @@ html.dark-theme {
     --hoverColor: #ffffff;
     --transition: background-color 0.5s ease, color 0.5s ease;
     --hoverText: #000000;
-    --hoverBackground: #F6F4F6;
+    --hoverBackground: rgb(246, 244, 246, 0.1); /* Changed from #F6F4F6 to rgb */
     --backgroundTransitionColor: rgba(0, 0, 0, 0.5);
 
 }
