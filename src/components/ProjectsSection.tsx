@@ -6,7 +6,7 @@ const projects = [
     image: "/images/opleglandingpage.webp",
     id: "1",
     description: "Opleg Landing Page",
-    link: "https://opleg.com/",
+    link: "https://sc-149-manage-see-expenses.opleg.pages.dev/",
   },
   {
     image: "/images/ecommerce.webp",
@@ -30,23 +30,25 @@ const projects = [
 
 const ProjectsSection: React.FC = () => {
   return (
-    <InView threshold={0.0}>
+    <InView threshold={0}>
       {({ inView, ref, entry }) => (
         <div
-          id="projects"
           ref={ref}
           className={
             inView
-              ? "projects grid grid-rows-1 gap-20 w-full animate-move-up"
-              : "grid grid-rows-1 gap-20 w-full"
+              ? "projects grid grid-rows-1 gap-8 md:gap-20 w-full animate-move-up"
+              : "grid grid-rows-1 gap-8 md:gap-20 w-full"
           }
           aria-label="projects-title"
         >
-          <h6 className="font-firacodebold text-2xl md:text-8xl text-headlinesFontColor">
+          <h6
+            id="projects"
+            className="font-firacodebold text-4xl md:text-6xl lg:text-8xl text-headlinesFontColor text-center md:text-left"
+          >
             PROJECTS
           </h6>
           <section
-            className="project-section gap-20 pl-12 grid grid-cols-2 justify-center items-center gap-10 pb-20"
+            className="project-section gap-8 md:gap-20 px-4 md:px-12 grid grid-cols-1 md:grid-cols-2 justify-center items-center pb-20"
             aria-label="Projects"
           >
             {projects.map(project => (
@@ -55,12 +57,12 @@ const ProjectsSection: React.FC = () => {
                 href={project.link}
                 target="_blank"
                 key={project.id}
-                className={`col-span-1 h-[100%] w-[90%] transition-transform duration-900 ease-in-out transform projectCardBorderRadius cursor-pointer flex flex-row flex-wrap justify-center`}
+                className={`col-span-1 h-full w-full md:w-[90%] transition-transform duration-900 ease-in-out transform projectCardBorderRadius cursor-pointer flex flex-row flex-wrap justify-center`}
               >
                 <img
                   src={project.image}
                   alt={project.description}
-                  className="w-full h-full object-cover rounded-3xl"
+                  className="w-full h-full object-cover rounded-3xl aspect-video"
                 />
                 <div className="absolute inset-0 bg-backgroundTransitionColor bg-opacity-30 hover:opacity-0 opacity-100 transition-opacity duration-300 rounded-3xl">
                   <img

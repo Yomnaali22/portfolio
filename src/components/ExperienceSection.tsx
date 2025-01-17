@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { InView } from "react-intersection-observer";
 
 const ExperienceSection: React.FC = () => {

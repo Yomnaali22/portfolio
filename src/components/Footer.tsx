@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ScrollButton from "./ScrollButton";
 
 const Footer: React.FC = () => {
   return (
@@ -29,6 +30,9 @@ const Footer: React.FC = () => {
           className="h-[35px] w-[35px]"
         />
       </Link>
+      <div className="absolute bottom-[100px] right-28">
+        <ScrollButton dir="top" />
+      </div>
     </div>
   );
 };

@@ -1,13 +1,16 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
 import { context } from "./../useTheme";
+import useCarousel from "@/hooks/useCarousel";
 
 const MediaQuery = dynamic(() => import("react-responsive"), { ssr: false });
 const MenuItems = ({ isMobile }: { isMobile?: boolean }) => {
   const classname = `${
-    !isMobile ? "hover:underline underline-offset-[28px]" : "p-2"
-  } decoration-[0.1px]  hover:shadow-custom hover:text-hoverColor  transition duration-300 ease-in-out`;
+    !isMobile
+      ? "hover:underline underline-offset-[28px]"
+      : "w-full p-2 rounded-md hove r:bg-headlinesFontColor/10"
+  } decoration-[0.1px] hover:text-hoverColor transition duration-300 ease-in-out`;
   return (
     <>
       <Link href="#experience" className={classname} aria-label="My Experience">
@@ -44,34 +47,12 @@ export default function Header() {
       setIsOpen(!isOpen);
     };
 
-    // Close menu when clicking outside
-    useEffect(() => {
-      const handleClickOutside = (event: MouseEvent) => {
-        const menu = document.getElementById("mobile-menu");
-        const button = document.getElementById("menu-button");
-        if (
-          menu &&
-          !menu.contains(event.target as Node) &&
-          button &&
-          !button.contains(event.target as Node)
-        ) {
-          setIsOpen(false);
-        }
-      };
-
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, []);
-
     return (
-      <div className="flex gap-5 relative">
+      <div className="flex gap-5">
         <button
-          id="menu-button"
           onClick={toggleMenu}
           aria-label="Open Menu Button"
-          className="cursor-pointer hover:opacity-80 transition-opacity duration-200 relative z-20"
+          className="cursor-pointer"
         >
           <svg
             x="0px"
@@ -79,11 +60,11 @@ export default function Header() {
             width="70"
             height="70"
             viewBox="0 0 50 50"
+            stroke="text-sectionFontColor"
             className="size-6 text-sectionFontColor"
           >
             <path
-              className="stroke-current"
-              strokeWidth="3"
+              className="stroke-current" // Ensure the stroke uses
               d="M 5 9 L 5 11 L 45 11 L 45 9 L 5 9 z M 5 24 L 5 26 L 45 26 L 45 24 L 5 24 z M 5 39 L 5 41 L 45 41 L 45 39 L 5 39 z"
             />
           </svg>
@@ -91,11 +72,8 @@ export default function Header() {
 
         {isOpen && (
           <ul
-            id="mobile-menu"
-            className="w-48 bg-background text-sectionFontColor absolute mt-2 rounded-lg shadow-xl z-10 
-                     flex flex-col right-2 p-4 top-8
-                     border border-headlinesFontColor/20 backdrop-blur-sm
-                     animate-fadeIn"
+            className="mobile-menu w-40 min-h-[8rem] text-sectionFontColor absolute mt-2 rounded-md shadow-lg z-10 flex flex-col gap-2 transform -translate-x-[3rem] -translate-y-[-1rem] border border-headlinesFontColor/20 p-3 backdrop-blur-sm transition-all duration-300 ease-in-out"
+            // tabIndex={0}
           >
             <MenuItems isMobile={isMobile} />
           </ul>
@@ -128,7 +106,7 @@ export default function Header() {
       {/* navigation */}
       <MediaQuery query="(min-width: 800px)">
         <nav
-          className="w-fullxs:text-extraSmall sm:text-sm md:text-lg lg:text-xl flex justify-center items-center text-sectionFontColor md:flex md:gap-20 lg:gap-20 xs:gap-3 sm:gap-10 font-firacoderegular"
+          className="w-full xs:text-extraSmall sm:text-sm md:text-lg lg:text-xl flex justify-center items-center text-sectionFontColor md:flex md:gap-20 lg:gap-20 xs:gap-3 sm:gap-10 font-firacoderegular"
           aria-label="Main Navigation"
         >
           <MenuItems />
