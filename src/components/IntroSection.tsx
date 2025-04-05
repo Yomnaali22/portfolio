@@ -51,11 +51,11 @@ const IntroSection: React.FC = () => {
         </div>
         {/* Added container for Image */}
         <img
-          src="/images/avatarGroup.webp"
+          src="avatarGroup.webp"
           alt="Yomna Ali, a front-end developer"
           className="object-contain w-[41%] h-full"
           onError={e => {
-            e.currentTarget.src = "/images/avatarGroup.webp"; // Fallback image
+            e.currentTarget.src = "avatarGroup.webp"; // Fallback image
           }}
         />
       </div>
