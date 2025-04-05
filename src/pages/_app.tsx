@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 export const runtime = "experimental-edge";
 import localFont from "next/font/local";
 import Head from "next/head";
+import Script from "next/script";
 
 const firaCodeBold = localFont({
   src: "./../fonts/FiraCode-Bold.woff",
@@ -17,7 +18,6 @@ const firaCodeRegular = localFont({
 
 const firaCodeSemiBold = localFont({
   src: "./../fonts/FiraCode-semiBold.woff",
-
   variable: "--firaCodeSemiBold",
 });
 

@@ -5,7 +5,7 @@
 .vercel/
 
 # Ignore Next.js export output
-out/
+
 
 .next
 

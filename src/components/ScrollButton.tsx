@@ -9,12 +9,12 @@ const ScrollButton = ({ dir }: { dir: string }) => {
         });
         window.history.pushState({}, "", "/"); // Clear pathname using window
       }}
-      className="border border-[0.1px] border-headlinesSectionColor scrollButton absolute left-[50%] transform -translate-x-1/2 animate-float xs:w-12 xs:h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-16 lg:h-16 rounded-full scrollButton bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all duration-300"
+      className="border border-[0.5px] border-headlinesSectionColor scrollButton absolute left-[50%] transform -translate-x-1/2 animate-float xs:w-12 xs:h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-12 lg:h-12 rounded-full scrollButton bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all duration-300"
     >
       <svg
-        className="text-headlinesFontColor xs:w-5 xs:h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8"
-        width="32"
-        height="32"
+        className="text-headlinesFontColor xs:w-5 xs:h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-5 lg:h-5"
+        width="25px"
+        height="25px"
         viewBox="0 0 24 24"
         fill="none"
       >

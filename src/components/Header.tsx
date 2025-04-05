@@ -2,14 +2,13 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useState, useContext } from "react";
 import { context } from "./../useTheme";
-import useCarousel from "@/hooks/useCarousel";
 
 const MediaQuery = dynamic(() => import("react-responsive"), { ssr: false });
 const MenuItems = ({ isMobile }: { isMobile?: boolean }) => {
   const classname = `${
     !isMobile
-      ? "hover:underline underline-offset-[28px]"
-      : "w-full p-2 rounded-md hove r:bg-headlinesFontColor/10"
+      ? "underline-offset-[28px]"
+      : "w-full p-2 rounded-md hover r:bg-headlinesFontColor/10"
   } decoration-[0.1px] hover:text-hoverColor transition duration-300 ease-in-out`;
   return (
     <>
@@ -78,7 +77,7 @@ export default function Header() {
             <MenuItems isMobile={isMobile} />
           </ul>
         )}
-        <ToggleThemeButton />
+        {/* <ToggleThemeButton /> */}
       </div>
     );
   };
@@ -111,7 +110,7 @@ export default function Header() {
         >
           <MenuItems />
         </nav>
-        <ToggleThemeButton />
+        {/* <ToggleThemeButton /> */}
       </MediaQuery>
 
       {/* mobile navigation */}

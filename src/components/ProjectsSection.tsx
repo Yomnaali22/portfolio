@@ -8,23 +8,25 @@ const projects = [
     description: "Opleg Landing Page",
     link: "https://sc-149-manage-see-expenses.opleg.pages.dev/",
   },
+
+  {
+    image: "/images/screenshot2.webp",
+    id: "2",
+    description:
+      "Inventory Management System in Rust, react and typescript Using Tauri",
+    link: "https://github.com/Yomnaali22/Inventory-Management-System?tab=readme-ov-file#inventory-management-system-for-small-retail-store:~:text=Inventory%20Management%20System%20for%20Small%20Retail%20Store",
+  },
   {
     image: "/images/ecommerce.webp",
     id: "3",
     description: "Ecommerce",
-    link: "https://opleg.com/",
+    link: "",
   },
   {
     image: "/images/landingpage.webp",
-    id: "2",
-    description: "Landing Page",
-    link: "https://opleg.com/",
-  },
-  {
-    image: "/images/movieswebsite.webp",
     id: "4",
-    description: "Movies Website",
-    link: "https://opleg.com/",
+    description: "Landing Page",
+    link: "https://yomnaali22.github.io/Landing-Page/",
   },
 ];
 
@@ -64,7 +66,7 @@ const ProjectsSection: React.FC = () => {
                   alt={project.description}
                   className="w-full h-full object-cover rounded-3xl aspect-video"
                 />
-                <div className="absolute inset-0 bg-backgroundTransitionColor bg-opacity-30 hover:opacity-0 opacity-100 transition-opacity duration-300 rounded-3xl">
+                <div className="absolute inset-0 bg-backgroundTransitionColor hover:opacity-0 opacity-50 transition-opacity duration-300 rounded-3xl">
                   <img
                     alt="open project in new tab icon"
                     src="/images/opentab.webp"
