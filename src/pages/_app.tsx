@@ -11,13 +11,13 @@ const firaCodeBold = localFont({
 });
 
 const firaCodeRegular = localFont({
-  src: "./../fonts/FiraCode-regular.woff",
+  src: "./../fonts/FiraCode-Regular.woff",
 
   variable: "--firaCodeRegular",
 });
 
 const firaCodeSemiBold = localFont({
-  src: "./../fonts/FiraCode-semiBold.woff",
+  src: "./../fonts/FiraCode-SemiBold.woff",
   variable: "--firaCodeSemiBold",
 });
 
