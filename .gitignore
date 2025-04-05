@@ -1,15 +1,10 @@
-/node_modules
-/package.lock.jsoon
-/.env
+node_modules
+.env
 # Ignore Vercel deployment folder
 .vercel/
 
 # Ignore Next.js export output
-
-
 .next
-
-
 libwebp-1.4.0-mac-x86-64
 .aider*
 .env
