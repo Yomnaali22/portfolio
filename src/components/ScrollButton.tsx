@@ -7,7 +7,7 @@ const ScrollButton = ({ dir }: { dir: string }) => {
           top: dir === "top" ? 0 : window.innerHeight,
           behavior: "smooth",
         });
-        window.history.pushState({}, "", "/"); // Clear pathname using window
+        window.history.pushState({}, "", "/portfolio"); // Clear pathname using window
       }}
       className="border border-[0.5px] border-headlinesSectionColor scrollButton absolute left-[50%] transform -translate-x-1/2 animate-float xs:w-12 xs:h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-12 lg:h-12 rounded-full scrollButton bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all duration-300"
     >
