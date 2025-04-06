@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ScrollButton from "./ScrollButton";
 
 const IntroSection: React.FC = () => {
   return (
@@ -56,7 +55,6 @@ const IntroSection: React.FC = () => {
           className="object-contain w-[41%] h-full"
         />
       </div>
-      <ScrollButton dir="bottom" />
     </div>
   );
 };
