@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
         />
       </Link>
       <div className="absolute bottom-[100px] right-28">
-        <ScrollButton dir="top" />
+        <ScrollButton />
       </div>
     </div>
   );

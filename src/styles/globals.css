@@ -115,6 +115,10 @@ html::-webkit-scrollbar {
     @apply hover:text-hoverColor transition duration-300 ease-in-out;
   }
   
+  .smooth-scroll {
+    @apply block w-full h-full;
+  }
+  
   .responsive-container {
     @apply w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
   }
