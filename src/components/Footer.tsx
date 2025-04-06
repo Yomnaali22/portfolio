@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
         target="_blank"
       >
         <img
-          src="/images/gmail_icon.webp"
+          src="images/gmail_icon.webp"
           alt="Gmail"
           className="h-[38px] w-[38px]"
         />

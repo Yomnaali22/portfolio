@@ -3,27 +3,27 @@ import { InView } from "react-intersection-observer";
 
 const projects = [
   {
-    image: "/images/opleglandingpage.webp",
+    image: "images/opleglandingpage.webp",
     id: "1",
     description: "Opleg Landing Page",
     link: "https://sc-149-manage-see-expenses.opleg.pages.dev/",
   },
 
   {
-    image: "/images/screenshot2.webp",
+    image: "images/screenshot2.webp",
     id: "2",
     description:
       "Inventory Management System in Rust, react and typescript Using Tauri",
     link: "https://github.com/Yomnaali22/Inventory-Management-System?tab=readme-ov-file#inventory-management-system-for-small-retail-store:~:text=Inventory%20Management%20System%20for%20Small%20Retail%20Store",
   },
   {
-    image: "/images/ecommerce.webp",
+    image: "images/ecommerce.webp",
     id: "3",
     description: "Ecommerce",
     link: "",
   },
   {
-    image: "/images/landingpage.webp",
+    image: "images/landingpage.webp",
     id: "4",
     description: "Landing Page",
     link: "https://yomnaali22.github.io/Landing-Page/",
@@ -69,7 +69,7 @@ const ProjectsSection: React.FC = () => {
                 <div className="absolute inset-0 bg-backgroundTransitionColor hover:opacity-0 opacity-50 transition-opacity duration-300 rounded-3xl">
                   <img
                     alt="open project in new tab icon"
-                    src="/images/opentab.webp"
+                    src="images/opentab.webp"
                     className="opacity-50 w-16 h-16 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                   />
                 </div>
