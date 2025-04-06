@@ -23,7 +23,7 @@ const projects = [
     link: "",
   },
   {
-    image: "images/landingPage.webp",
+    image: "images/landingpage.webp",
     id: "4",
     description: "Landing Page",
     link: "https://yomnaali22.github.io/Landing-Page/",
