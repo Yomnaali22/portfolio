@@ -4,7 +4,7 @@ node_modules
 .vercel/
 
 # Ignore Next.js export output
-.next
+.next/
 libwebp-1.4.0-mac-x86-64
 .aider*
 .env
