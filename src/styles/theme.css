@@ -9,13 +9,13 @@ html.light-theme {
     --backgroundTransitionColor: rgba(0, 0, 0, 0.1);
 }
 html.dark-theme {
-    --background: linear-gradient(200deg, #050507, #202026);
+    --background: linear-gradient(190deg, #000000, #2e2e30) fixed no-repeat;
+    --headerBackground: linear-gradient(-120deg, #242323, #151515) fixed no-repeat;
     --headlinesFontColor: #DFD9DB;
-    --sectionFontColor: #D6B9AD;
+    --sectionFontColor: #bcc7db;
     --hoverColor: #ffffff;
     --transition: background-color 0.5s ease, color 0.5s ease;
     --hoverText: #000000;
     --hoverBackground: rgb(246, 244, 246, 0.1); /* Changed from #F6F4F6 to rgb */
     --backgroundTransitionColor: rgba(0, 0, 0, 0.5);
-
 }

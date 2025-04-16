@@ -3,40 +3,39 @@
 @tailwind components;
 @tailwind utilities;
 @import "theme.css";
-
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+@keyframes fadeIn {
+  from { opacity: 0; 
+  background: var(--background);}
+  to { opacity: 1; 
+    background: var(--background);
+  }
 }
-
 
 @layer base {
   body {
-    background: var(--background);
+    background: var(--background);    
   }
+
   html {
     font-family: var(--fonts);
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
-    scroll-behavior: smooth;
+  overflow: hidden;
+  }
+  
+  html, body {
     background: var(--background);
+    animation: fadeIn 0.3s ease-in;
+    transition: var(--transition);
+    margin: 0;
+    padding: 0;
+    /* cursor: none; */
   }
 
-  .responsive-padding {
-    @apply md:pl-20 md:pr-20 sm:pl-16 sm:pr-16 xs:pl-10 xs:pr-10;
+  header {
+    background: var(--headerBackground);
   }
-  .marginTop{
-   @apply mt-10 md:mt-10 sm:mt-5 xs:mt-5;
-  }
- .pageSpacing {
-   @apply xl:gap-52 lg:gap-52 md:gap-32 sm:gap-20 xs:gap-20;
- }
- .projectCardBorderRadius {
-  @apply xl:rounded-3xl lg:rounded-3xl md:rounded-2xl sm:rounded-xl xs:rounded-xl
-}
 
-}
 
 html::-webkit-scrollbar { 
   display: none;  /* Safari and Chrome */
@@ -81,26 +80,117 @@ html::-webkit-scrollbar {
 .delay-400 {
   animation-delay: 400ms; /* No delay */
 }
-
+}
 
 /* Base responsive utilities */
 @layer utilities {
+  .icons-padding-top {
+    @apply xl:pt-5 lg:pt-5 md:pt-5 sm:pt-5 xs:pt-5;
+  }
+  .responsive-projects-icon {
+    @apply xl:w-[45px] xl:h-[45px] lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] sm:w-[30px] sm:h-[30px] xs:w-[30px] xs:h-[30px];
+  }
+  .projects-section-gap{
+    @apply xl:gap-[5rem] lg:gap-[5rem] md:gap-5 sm:gap-5 xs:gap-5;
+  }
+  .intro-button-position{
+    @apply absolute lg:top-[20%] lg:right-[20%]
+  }
+  .responsive-padding-left {
+    @apply md:pl-8 sm:pl-4 xs:pl-2;
+  }
+  .responsive-project-card {
+    @apply xl:w-[70%] lg:w-full md:w-full sm:w-full xs:w-full;
+  }
+  .responsive-header {
+    @apply p-4 sm:p-3 xs:p-3 lg:p-[1.2rem] md:p-3 xl:p-[1.2];
+  }
+  .scrollButton-position {
+    @apply absolute lg:top-[90px] lg: right-[50px] top:[70px] right-[30px] sm:top-[70px] sm:right-[20px] xs:top-[50px] xs:right-[10px];
+  }
+  .responsive-button {
+    @apply px-4 py-2 text-sm md:px-6 md:py-3 md:text-base lg:px-8 lg:py-4 lg:text-lg 
+  }
+  .responsive-icon {
+    @apply w-5 h-5 md:w-10 md:h-10 lg:w-11 lg:h-11 xl:w-11 xl:h-11;
+  }
+  .responsive-title {
+    @apply xl:text-2xl lg:text-2xl sm:text-lg xs:text-sm;
+  }
+  .responsive-text {
+    @apply text-base md:text-lg lg:text-2xl xl:text-2xl sm:text-lg xs:text-[1rem];
+  }
+  .contact-responsive-gap {
+    @apply lg:gap-10 xl:gap-10 xs:gap-3 sm:gap-5 md:gap-10;
+  }
+  .responsive-gap {
+    @apply gap-2 xs:gap-[0.8rem] sm:gap-[0.5rem]  md:gap-2 lg:gap-5 xl:gap-5;
+  }
+  .responsive-padding {
+    @apply lg:pl-12 lg:pt-20 md:pl-16 md:pt-20 sm:pl-5 sm:pt-20 xs:pl-2 xs:pt-12;
+  }
+  .responsive-sections-padding {
+    @apply xl:pl-12 xl:pt-5 lg:pl-12 lg:pt-5 md:pl-16 md:pt-20 sm:pl-5 sm:pt-20 xs:pl-2 xs:pt-12;
+  }
+  .experienceSec-responsive-padding {
+    @apply lg:pl-12 lg:pt-[8rem] md:pl-16 md:pt-[10rem] sm:pl-16 sm:pt-[10rem] xs:pl-2 xs:pt-12;
+  }
+  .projectsSec-responsive-padding {
+    @apply lg:pl-[3rem] lg:pr-[3rem] xl:pl-[3rem] xl:pr-[2rem] md:pl-16 md:pt-20 sm:pl-5 sm:pt-20 xs:pl-2 xs:pt-12;
+  }
+  .marginTop{
+   @apply mt-10 md:mt-10 sm:mt-5 xs:mt-5 lg:mt-5 xl:mt-5;
+  }
+ .pageSpacing {
+   @apply xl:gap-52 lg:gap-52 md:gap-32 sm:gap-20 xs:gap-20;
+ }
+ .projectCardBorderRadius {
+  @apply xl:rounded-3xl lg:rounded-3xl md:rounded-2xl sm:rounded-xl xs:rounded-xl
+}
+
   .container-padding {
     @apply px-4 md:px-6 lg:px-8;
   }
   
-  .responsive-text {
-    @apply text-base md:text-lg lg:text-xl;
-  }
-  
   .section-spacing {
     @apply my-8 md:my-12 lg:my-16;
+  }
+  
+  .responsive-container {
+    @apply w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
   }
  
 }
 
 
 @layer components {
+  .intro-blur {
+    position: relative;
+  }
+  .intro-blur::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    backdrop-filter: blur(20px);
+  }
+
+  /* Section transition styles */
+  .section-transition {
+    @apply transition-all duration-1000 ease;
+  }
+  
+  .section-active {
+    @apply opacity-100 translate-y-0 z-10;
+  }
+  
+  .section-inactive {
+    @apply opacity-0 translate-y-4 z-0;
+  }
+
   .mobile-menu {
     @apply w-56 bg-background text-sectionFontColor absolute mt-2 rounded-lg shadow-xl z-10 
            flex flex-col right-0 p-2 top-12 border border-headlinesFontColor backdrop-blur-sm
@@ -111,20 +201,5 @@ html::-webkit-scrollbar {
     @apply w-56 bg-background text-sectionFontColor absolute mt-2 rounded-lg shadow-xl z-10 
           backdrop-blur-sm animate-fade-in
   }
-  .nav-link {
-    @apply hover:text-hoverColor transition duration-300 ease-in-out;
-  }
-  
-  .smooth-scroll {
-    @apply block w-full h-full;
-  }
-  
-  .responsive-container {
-    @apply w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
-  }
-  
-  .section-padding {
-    @apply py-8 md:py-12 lg:py-16;
-  }
-  
+
 }

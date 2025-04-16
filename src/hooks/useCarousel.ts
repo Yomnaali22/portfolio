@@ -1,6 +1,13 @@
 import { useState } from "react";
 
-const useCarousel = (comps: []) => {
+interface Project {
+  image: string;
+  id: string;
+  description: string;
+  link: string;
+}
+
+const useCarousel = (comps: Project[]) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
